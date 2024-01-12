@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@800&family=Poppins&family=Sawarabi+Gothic&family=Sometype+Mono&display=swap');
 
 body {
-    margin: 0px;
-    padding: 0px;
     background-color: #121012;
     color: #ffffff;
     text-decoration: none;
@@ -13,26 +11,141 @@ h1 {
     font-family: 'Archivo Black', sans-serif;
 }
 
-header, .nav-ul {
+/*HEADER*/
+header,
+.nav-ul {
     display: flex;
 }
 
+.nav-logo {
+    height: 100%;
+    width: 20%;
+    margin-left: 2rem;
+}
+
 .nav-bar {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    justify-content: right;
+    margin-right: 2rem;
+}
+
+.nav-ul li a {
+    margin-inline-start: 5rem;
+    /*lower the margin for responsive*/
+    transition: .2s ease;
+}
+
+.nav-ul li a:hover {
+    font-size: 1.3rem;
+}
+
+a,
+li {
+    list-style-type: none;
+    text-decoration: none;
+    color: #00ff28;
+    text-shadow: rgba(64, 255, 0, 0.9) 0px 0px 22px;
+    font-weight: bold;
+}
+
+/*ABOUT ME*/
+.body-container {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.me-container {
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+
+.me-text-container {
+    height: 100%;
+    width: 60%;
+    font-size: 1.5rem;
+    
+}
+
+.me-title {
+    font-size: 2rem;
+    transform: translateY(50px);
+    animation: text-pop-up-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes text-pop-up-right {
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.me-img-container {
+    height: 100%;
+    width: 40%;
+    padding: 1rem;
+}
+
+.me-img {
+    background-image: url("images/isem");
+    object-fit: cover;
+}
+
+/*CAROUSEL*/
+.studies-container {
+    height: 100%;
+    width: 90%;
+    display: flex;
+}
+
+.collage-img {
+    width: 30%;
     display: grid;
     place-items: center;
 }
 
+.collage-name{
+    h1, h2 {
+        margin: 0;
+    }
+}
 
-.nav-ul li {
+.collage-info {
+    width: 70%;
+    font-size: 1.15rem;
     margin: 1rem;
 }
 
-
-
-a, li {
-    list-style-type: none;
-    text-decoration: none;
-    color: #00ff28;
-    text-shadow: rgba(64,255,0,0.9) 0px 0px 22px;
-    font-weight: bold;
+.more-title {
+    display: grid;
+    place-items: center;
+    margin: 2rem;
+    h1{
+        margin: 0;
+    }
 }
+
+.more-imgs-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+    justify-content: center;
+}
+
+.more-img {
+    height: 50vh;
+    width: 50vh;
+    background-color: transparent; /*place an img on each img and remove the transparent/opacity?*/
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
